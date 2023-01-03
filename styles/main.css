@@ -182,6 +182,11 @@ h1{
     padding: 15px 23px;
 }
 
+.currency-item .current{
+    border: 2px solid #F2AE4B;
+    box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
+}
+
 .head-currency-info{
     display: flex;
     justify-content: space-between;
@@ -191,6 +196,40 @@ h1{
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
+}
+
+.balance{
+    color: #828282;
+    margin-bottom: 8px;
+}
+
+.balance-speed{
+    padding-left: 13px;
+    position: relative;
+}
+
+.balance-speed::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #2F80ED;
+    border-radius: 50%;
+    top: 10px;
+    left: 0;
+}
+
+.help-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #929292;
+    font-weight: 400;
+    font-size: 16px;
+    color: #828282;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .name-currency > span{
@@ -207,6 +246,35 @@ h1{
 .speed img{
     display: block;
     margin-right: 8px;
+}
+
+.hashrate.options-balance{
+    background-color: transparent;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.binance,
+.buy-sell{
+    height: 100%;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.binance{
+    width: 143px;
+    border: 2px solid #F3BA2F;
+    background-color: #ffffff;
+    background-image: url('../images/binance-icon.png');
+}
+
+.buy-sell{
+    width: 138px;
+    height: 100%;
+    background-color: #00D56E;
+    background-image: url('../images/buy-sell-icon.png');
 }
 
 .speed{
@@ -233,6 +301,25 @@ h1{
     background-color: #ffffff;
     border-radius: 5px;
     margin-top: 14px;
+    padding-left: 18px;
+    box-sizing: border-box;
+    color: #4F4F4F;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.autohash > span{
+    color: #828282;
+    font-weight: 400;
+}
+
+.radio input:checked{
+    border: 3px solid red;
+}
+
+.autohash{
+    margin-left: 14px;
 }
 
 .action-btn{
@@ -265,6 +352,59 @@ h1{
     padding-left: 10px;
 }
 
+.total{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 39px;
+}
+
+.total-item{
+    margin-left: 36px;
+}
+
+.total-item:first-child{
+    margin-left: 0;
+}
+
+.total-head{
+    font-weight: 500;
+    color: #828282;
+}
+
+.total-item > .sum{
+    font-size: 20px;
+    padding-left: 14px;
+    margin-top: 6px;
+    position: relative;
+}
+
+.total-item > .sum::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 37%;
+    left: 0;
+}
+
+.total-item > .amount::before{
+    background-color: #27AE60;
+}
+
+.total-item > .earn::before{
+    background: linear-gradient(180deg, #2D9CDB 0%, #255F80 100%);
+}
+
+.total-item > .tax::before{
+    background-color: #F2994A;
+}
+
+.total-item > .sum > span{
+    font-size: 12px;
+    color: #828282;
+
+}
 
 
 @media screen and (max-width: 1240px){
