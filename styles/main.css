@@ -406,6 +406,198 @@ h1{
 
 }
 
+.profit-data{
+    display: grid;
+    grid-template-columns: 915px 300px;
+    grid-template-rows: 316px 302px;
+    column-gap: 25px;
+    row-gap: 33px;
+    margin-top: 22px;
+}
+
+.data-name{
+    color: #828282;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.scedule-data{
+    width: 915px;
+    height: 289px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+    padding: 22px 22px 18px 22px;
+}
+
+.schedule-options{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.opt-cur,
+.opt-time{
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    color: #BDBDBD;
+}
+
+.usd,
+.opt-cur > .btc, 
+.two-week,
+.week{
+    border: 1px solid #BDBDBD;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usd, 
+.two-week{
+    border-radius: 5px 0 0 5px;
+}
+
+.opt-cur > .btc, 
+.week{
+    border-radius: 0 5px 5px 0;
+    margin-left: -1px;
+}
+
+.usd,
+.opt-cur > .btc{
+    min-width: 56px;
+}
+
+.two-week,
+.week{
+    min-width: 77px;
+}
+
+.schedule-options .current,
+.opt-cur > div:hover,
+.opt-time > div:hover{
+    color: #162970;
+    border-color: #162970;
+    cursor: pointer;
+}
+
+.forecast-profit{
+    width: 300px;
+    height: 289px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 22px 10px 22px 20px;
+    box-sizing: border-box;
+}
+
+.forecast-profit .name{
+    color: #BDBDBD;
+}
+
+.forecast-profit .forecast-profit-data{
+    color: #4F4F4F;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 6px;
+}
+
+.forecast-profit-item{
+    margin-bottom: 17px;
+}
+
+.option-buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option-button-item{
+    color: #A3A3A3;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 31px;
+    padding: 12px 21px;
+}
+
+.option-button-item.current{
+    color: #255390;
+    font-weight: 700;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+.option-button-item:hover{
+    color: #255390;
+    border-color: #255390;
+    cursor: pointer;
+}
+
+.option-button-item:first-child{
+    margin-left: 0;
+}
+
+.statistic-table{
+    width: 915px;
+    min-height: 213px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 25px 20px 20px 30px;
+    box-sizing: border-box;
+    margin-top: 19px;
+}
+
+.contract-item{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 300px;
+    height: 66px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.contract-item > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contract-name{
+    color: #4F4F4F;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contract-speed{
+    color: #4F4F4F;
+    font-size: 15px;
+}
+
+.contract-status{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.contract-status.active{
+    color: #219653;
+}
+
+.contract-status.almost-finished{
+    color: #F2994A;
+}
+
+.contract-period{
+    color: #4F4F4F;
+    font-size: 13px;
+    font-weight: 500;
+}
 
 @media screen and (max-width: 1240px){
     .header > .container{
