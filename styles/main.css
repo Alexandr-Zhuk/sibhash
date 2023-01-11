@@ -56,6 +56,11 @@ a{
     box-sizing: border-box;
 }
 
+.main-menu-item:hover{
+    border-color: #162970;
+    box-shadow: 0px 0px 5px 1px rgba(22,  41,  112, 0.62);
+}
+
 .main-menu-item{
     width: 213px;
     border: 1px solid #DBDBDB;
@@ -82,7 +87,18 @@ a{
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    
 }
+
+.personal-info > .photo:hover,
+.personal-info > a > img:hover{
+    box-shadow: 0px 0px 5px 1px rgba(22,  41,  112, 0.62);
+}
+
+.personal-info > a > img{
+    border-radius: 50%;
+}
+
 
 .personal-name{
     font-weight: 500;
@@ -92,6 +108,10 @@ a{
 
 .personal-name a{
     color: #828282;
+}
+
+.personal-name a:hover{
+    color: #162970;
 }
 
 .header-burger{
@@ -182,6 +202,11 @@ h1{
     padding: 15px 23px;
 }
 
+.currency-info:hover{
+    border: 2px solid #F2AE4B;
+    box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
+}
+
 .currency-item .current{
     border: 2px solid #F2AE4B;
     box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
@@ -235,6 +260,36 @@ h1{
     justify-content: center;
     display: flex;
     align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.help-icon:hover{
+    border-color: #F2AE4B;
+    
+}
+
+.help-icon::after{
+    content: attr(data-tooltip);
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F2AE4B;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 5;
+    font-size: 13px;
+    top: 30px;
+    left: -140px;
+
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.help-icon:hover::after{
+   
+    opacity: 1;
+    
 }
 
 .name-currency > span{
@@ -266,6 +321,18 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
+}
+
+.binance a,
+.buy-sell a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.binance a:hover,
+.buy-sell a:hover{
+    box-shadow: 0px 8px 10px rgb(60 84 117 / 35%);
 }
 
 .binance{
@@ -337,6 +404,10 @@ h1{
     min-width: 187px;
     border-radius: 20px;
     position: relative;
+}
+
+.action-btn:hover{
+    background: linear-gradient(270deg, #255390 0%, #1c60b8 99.28%);
 }
 
 .action-btn::before{
@@ -431,6 +502,7 @@ h1{
     margin-bottom: 9px;
 }
 
+
 .scedule-data{
     width: 100%;
     height: 289px;
@@ -439,10 +511,18 @@ h1{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
     box-sizing: border-box;
     padding: 22px 22px 18px 22px;
-    background-image: url("../images/schedule.png");
-    background-repeat: no-repeat;
-    overflow-x: auto;
+    
 }
+
+.scedule-image{
+    overflow-x: auto; 
+}
+
+.scedule-image img{
+    width: 100%;
+}
+
+
 
 .schedule-options{
     display: flex;
@@ -500,7 +580,7 @@ h1{
 
 .forecast-profit{
     max-width: 100%;
-    height: 289px;
+    min-height: 289px;
     background-color: #ffffff;
     border-radius: 5px;
     padding: 22px 10px 22px 20px;
@@ -692,6 +772,12 @@ h1{
     box-sizing: border-box;
 }
 
+.contract-item:hover{
+    border-color: #162970;
+    box-shadow: 0px 0px 5px 1px rgba(22,  41,  112, 0.62);
+    cursor: pointer;
+}
+
 .contract-item > div{
     display: flex;
     justify-content: space-between;
@@ -741,6 +827,13 @@ h1{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+}
+
+.more:hover{
+    color: #162970;
+    border-color: #162970;
+    box-shadow: 0px 0px 5px 1px rgba(22,  41,  112, 0.62);
+    cursor: pointer;
 }
 
 .more > .all{
@@ -797,6 +890,10 @@ h1{
         grid-area: schedule;
     }
 
+    .scedule-image img{
+        width: auto;
+    }
+
     .forecast{
         grid-area: forecast;
     }
@@ -806,7 +903,7 @@ h1{
     }
 
     .profit-data{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(460px, 715px) minmax(480px, 715px);
         grid-template-areas: 
                 "schedule schedule"
                 "forecast contracts"
@@ -815,6 +912,8 @@ h1{
         justify-content: center;
         margin-top: 22px;
     }
+    
+    
 
     .copyright{
         padding-left: 20px;
@@ -855,6 +954,12 @@ h1{
         padding: 12px 20px;
     }
 
+    .profit-data{
+        grid-template-columns: minmax(300px, 550px) minmax(300px, 550px);
+    }
+
+    
+
     .statistic-table .time{
         width: 100px; 
     }
@@ -871,6 +976,9 @@ h1{
 
 @media screen and (max-width: 767px){
 
+    body.lock{
+        overflow: hidden;
+    }
    
 
     .header > .container{
@@ -986,7 +1094,7 @@ h1{
 
 
     .profit-data{
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(520px, 630px);
         grid-template-areas: 
         "schedule"
         "forecast"
@@ -1064,6 +1172,10 @@ h1{
         justify-content: center;
     }
 
+    .opt-time, .opt-cur{
+        margin-top: 15px;
+    }
+
     .action-btn{
         margin-top: 20px;
         height: 50px;
@@ -1083,7 +1195,15 @@ h1{
     .profit-data{
         
         grid-template-columns: minmax(280px, 1fr);
+        grid-template-rows: minmax(316px, auto);
 
+    }
+
+
+    .scedule-data{
+        padding: 10px;
+        height: auto;
+        
     }
 
     .forecast-profit-item{
